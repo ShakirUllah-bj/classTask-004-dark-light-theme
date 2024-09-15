@@ -2,16 +2,17 @@
 
 //     var btn = document.getElementById("toggleBtn");
 
-//     if (document.body.style.backgroundColor === "white") {
+//     // var currentColor = window.getComputedStyle(document.body).backgroundColor;
+//     if (btn.textContent === "Night") {
 //         document.body.style.backgroundColor = "black";
 //         btn.style.backgroundColor = "white";
 //         btn.style.color = "black";
-//         btn.innerText = 'Day';
+//         btn.textContent = 'Day';
 //     } else {
 //         document.body.style.backgroundColor = "white";
 //         btn.style.backgroundColor = "black";
 //         bnt.style.color = "white";
-//         btn.innerText = 'night';
+//         btn.innerText = 'Night';
 //     }
 
 // })
@@ -22,15 +23,16 @@
 function toggleTheme() {
     var btn = document.getElementById("toggleBtn");
 
-    if (document.body.style.backgroundColor === "white") {
+    var currentColor = window.getComputedStyle(document.body).backgroundColor;
+    if (currentColor === "rgb(255, 255, 255)") {
         document.body.style.backgroundColor = "black";
-        btn.style.backgroundColor = "black";
-        btn.style.color = "white";
+        btn.style.backgroundColor = "white";
+        btn.style.color = "black";
         btn.innerText = "Day";
     } else {
         document.body.style.backgroundColor = "white";
-        btn.style.backgroundColor = "white";
-        btn.style.color = "black";
+        btn.style.backgroundColor = "black";
+        btn.style.color = "white";
         btn.innerText = "night";
     }
 }
